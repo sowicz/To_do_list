@@ -122,3 +122,25 @@ form button:hover {
     transform: translateY(8rem) rotateZ(20deg);
     opacity: 0;
 }
+
+
+.select {
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    appearance: none;
+    box-shadow: none;
+}
+select {
+    width: 10rem;
+    cursor: pointer;
+}
+
+
+.filtrowanie {
+    padding: 8.5px;
+    border: none;
+    color: rgb(73, 143, 143);
+    background-color: white;    
+}
+

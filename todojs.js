@@ -2,12 +2,12 @@
 const todoInput = document.querySelector('.todo-input');
 const todoButton = document.querySelector('.todo-button');
 const todoList = document.querySelector('.todo-list');
-
+const filtrOpcja = document.querySelector('.filtrowanie');
 
 // eventy listeners
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', koszzrobione);
-
+filtrOpcja.addEventListener('click', filtrTodo);
 
 //function
 
@@ -66,3 +66,30 @@ function koszzrobione(e) {
     }
 
 }
+
+function filtrTodo(c) {
+    const x = todoList.childNodes;
+    x.forEach(function(x){
+        switch(c.target.value){
+            case "wszystkie":
+                x.style.display = 'flex';
+                break;
+            case "zrobione":
+                if(x.classList.contains('completed')){
+                   x.style.display = 'flex'; 
+                }
+                else {
+                    x.style.display = 'none'
+                }
+            /*case "niezrobione":
+                if(x.classList.contains('todo')){
+                    x.style.display = 'flex';
+                }
+                else {
+                    x.style.display = 'none'
+                }*/
+            }
+        })
+    }
+
+
